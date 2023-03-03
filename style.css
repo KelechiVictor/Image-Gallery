@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #eee;
+}
+
+.container h1 {
+  font-weight: normal;
+  font-family: 'Clicker Script' , cursive;
+  font-size: 40px;
+  padding: 15px;
+  color: red;
+  text-transform: capitalize;
+  margin: auto;
+  text-align: center;
+  text-orientation: upright;
+  text-decoration: none;
+}
+
+.container .image-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.container .image-container .image {
+  height: 250px;
+  width: 350px;
+  background-color: white;
+  /*-webkit-box-shadow: 5px 7px 14px -7px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 5px 7px 14px -7px rgba(66, 68, 90, 1);*/
+  box-shadow: 5px 7px 4px -7px rgba(66, 68, 0, 1);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.container .image-container .image:hover img {
+  transform: scale(1.1);
+}
+
+.container p {
+  position: relative;
+  text-align: center;
+  color: #000;
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  margin-bottom: 10px;
+   
+}
+
+.container .modal-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.container .modal-image span {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  bottom: 150px;
+}
+
+.container .modal-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  border: 4px solid #eee;
+  width: 750px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .container .modal-image img {
+    width: 95%;
+  }
+}
